@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background-color: yellow;
+    
+    display: grid;
+    place-items: center center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav{
+    background: #212529;
+    height: 80px;
+    width: 100%;
+    z-index: 9999!important;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 40px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+li a.active, li a:hover{
+    background: orange;
+    transition: .10s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+section{
+    background: url() no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #212529;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+/*nav🔼*/
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 20px;
+    grid-gap:40px;
+
+}
+.card{
+background-color: white;
+border-radius: 10px;
+box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+.container{
+    position:relative;
+    
+   
+}
+img{
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+h1{
+    text-align: center;
+}
+.container:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+    
+}
+.details{
+    padding: 20px 10px;
+    
+}
+.details>h3{
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 15px 0; 
+    
+}
+.details>p{
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+}
+
+button{
+    background-color: #0d6efd;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    width: 25%;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+   
+}
+.banerr{
+    border-radius: 0;
+}
+.footer{
+    background-color: #2F2F2F;
+    padding:1.2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+    text-align: center;
+}
+.footer p{
+    color: white;
+}
+.redes{
+    display: flex;
+}
+
